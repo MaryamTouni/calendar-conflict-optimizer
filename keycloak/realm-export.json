@@ -1,0 +1,35 @@
+{
+  "realm": "calendar-realm",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "calendar-client",
+      "secret": "calendar-secret",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "redirectUris": ["*"],
+      "webOrigins": ["*"]
+    }
+  ],
+  "users": [
+    {
+      "username": "calendaruser",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": ["user"]
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "name": "user"
+      }
+    ]
+  }
+}
