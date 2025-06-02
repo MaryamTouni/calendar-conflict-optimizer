@@ -7,6 +7,15 @@ public class CalendarRequest {
     private String timeZone;
     private List<Event> events;
 
+    public CalendarRequest() {
+    }
+
+    public CalendarRequest(WorkingHours workingHours, String timeZone, List<Event> events) {
+        this.workingHours = workingHours;
+        this.timeZone = timeZone;
+        this.events = events;
+    }
+    
     public WorkingHours getWorkingHours() { return workingHours; }
     public void setWorkingHours(WorkingHours workingHours) { this.workingHours = workingHours; }
 
